@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EduSex: educación, orientación y recursos de salud sexual con información clara y respetuosa.">
+  <title>EduSex | Aprende, decide, cuídate</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo-edusex.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="EduSex, inicio">
+      <img src="assets/logo-edusex.svg" alt="Logo EduSex">
+      <span>Edu<span class="brand-accent">Sex</span><small>APRENDE · DECIDE · CUÍDATE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav id="mainNav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#mitos">Mitos y realidades</a>
+      <a href="#centros">Hospitales</a>
+      <a href="#orientacion">Orientación</a>
+      <a href="#chat-orientacion">Chat de orientación</a>
+      <a href="#prueba">Mini prueba</a>
+      <a class="nav-account" href="#cuenta">Mi perfil</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="screen hero" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow">UN ESPACIO PARA APRENDER SIN JUICIOS</span>
+        <h1>Tu bienestar.<br><span>Tu información.</span><br>Tu decisión.</h1>
+        <p>Información de educación sexual clara, respetuosa y fácil de entender. Explora, resuelve dudas y encuentra servicios de salud.</p>
+        <div class="actions">
+          <a class="btn primary" href="#mitos">Comenzar a explorar <span>→</span></a>
+          <a class="btn secondary" href="#centros">Encontrar hospitales</a>
+        </div>
+        <p class="small-note">Aprender también es una forma de cuidarte.</p>
+      </div>
+      <div class="hero-art" aria-label="Leopardo mascota con camisa que dice CECYTEM">
+        <img class="hero-mascot" src="assets/leopardo-cecytem.png" alt="Leopardo amistoso con mochila y camisa CECYTEM" loading="eager">
+      </div>
+    </section>
+
+    <section class="screen section" id="mitos">
+      <div class="section-heading">
+        <span class="eyebrow">01 / APRENDE</span>
+        <h2>Mitos y realidades</h2>
+        <p>Identifica algunas ideas comunes y conoce información confiable.</p>
+      </div>
+      <div class="myth-grid">
+        <article class="myth-card"><span class="tag myth">MITO</span><h3>“Hablar de sexualidad hace que las personas se adelanten.”</h3><p>La educación sexual ayuda a tomar decisiones informadas y responsables.</p><span class="tag reality">REALIDAD</span></article>
+        <article class="myth-card"><span class="tag myth">MITO</span><h3>“Todas las infecciones presentan síntomas visibles.”</h3><p>Algunas infecciones pueden no mostrar síntomas; la orientación médica y las pruebas son importantes.</p><span class="tag reality">REALIDAD</span></article>
+        <article class="myth-card"><span class="tag myth">MITO</span><h3>“Pedir orientación es motivo de vergüenza.”</h3><p>Consultar a personal de salud es una manera válida de cuidar el bienestar.</p><span class="tag reality">REALIDAD</span></article>
+      </div>
+      <div class="info-banner"><span class="info-icon">i</span><p><b>Recuerda:</b> esta información es educativa y no sustituye una consulta con personal de salud.</p></div>
+    </section>
+
+    <section class="screen section map-section" id="centros">
+      <div class="section-heading">
+        <span class="eyebrow">02 / ENCUENTRA APOYO</span>
+        <h2>Hospitales y centros de salud</h2>
+        <p>Busca hospitales por ciudad, colonia o código postal. El mapa se actualiza con tu búsqueda.</p>
+      </div>
+      <div class="map-layout">
+        <div class="map-search panel">
+          <label for="placeSearch">¿En qué zona quieres buscar?</label>
+          <div class="search-row">
+            <input id="placeSearch" type="search" value="Ixtlahuaca, Estado de México" placeholder="Ej. Toluca, Estado de México">
+            <button class="btn primary" id="searchMap">Buscar</button>
+          </div>
+          <div class="quick-search">
+            <span>Prueba:</span>
+            <button class="chip" data-place="hospitales en Ixtlahuaca, Estado de México">Ixtlahuaca</button>
+            <button class="chip" data-place="hospitales en Toluca, Estado de México">Toluca</button>
+            <button class="chip" data-place="centros de salud en Atlacomulco, Estado de México">Atlacomulco</button>
+          </div>
+          <div class="map-note"><span>ⓘ</span><p>Los resultados, horarios y servicios pueden cambiar. Confirma directamente con cada institución antes de acudir.</p></div>
+          <a class="text-link" id="openGoogleMaps" href="https://www.google.com/maps/search/hospitales+Ixtlahuaca+Estado+de+M%C3%A9xico/" target="_blank" rel="noopener noreferrer">Abrir resultados en Google Maps ↗</a>
+        </div>
+        <div class="map-frame-wrap">
+          <div class="map-label"><span class="live-dot"></span> MAPA DE BÚSQUEDA</div>
+          <iframe id="mapFrame" title="Mapa de Google Maps con hospitales" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=hospitales%20en%20Ixtlahuaca%2C%20Estado%20de%20M%C3%A9xico&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen section" id="orientacion">
+      <div class="section-heading">
+        <span class="eyebrow">03 / RESUELVE DUDAS</span>
+        <h2>Orientación inicial</h2>
+        <p>Elige un tema para ver una guía breve. No necesitas compartir datos personales.</p>
+      </div>
+      <div class="orientation-layout">
+        <div class="topic-list">
+          <button class="topic active" data-topic="consentimiento"><span>01</span><b>Consentimiento y límites</b><i>→</i></button>
+          <button class="topic" data-topic="prevencion"><span>02</span><b>Prevención y protección</b><i>→</i></button>
+          <button class="topic" data-topic="consulta"><span>03</span><b>¿Cuándo pedir ayuda?</b><i>→</i></button>
+        </div>
+        <article class="answer-panel panel" id="topicAnswer">
+          <div class="answer-icon">♡</div><span class="eyebrow">GUÍA BREVE</span>
+          <h3>Consentimiento y límites</h3>
+          <p>El consentimiento debe ser libre, claro, informado y puede retirarse en cualquier momento. Nadie debe presionarte para hacer algo que no deseas.</p>
+          <p>Si te sientes en riesgo o alguien no respeta tus límites, busca apoyo de una persona adulta de confianza o de servicios profesionales.</p>
+        </article>
+      </div>
+      <div class="notice-strip">Esta sección ofrece orientación general; no es un servicio de emergencia ni una consulta médica.</div>
+    </section>
+
+
+    <section class="screen section chat-section" id="chat-orientacion">
+      <div class="section-heading"><span class="eyebrow">04 / CONVERSA Y ORIÉNTATE</span><h2>Chat de orientación</h2><p>Elige una pregunta frecuente o escribe tu duda para recibir orientación general.</p></div>
+      <div class="chat-shell">
+        <aside class="chat-sidebar">
+          <div class="chat-profile"><div class="chat-avatar">E<span>+</span></div><div><b>EduSex te orienta</b><small><span class="live-dot"></span> Guía informativa</small></div></div>
+          <p class="chat-side-label">PREGUNTAS FRECUENTES</p>
+          <button class="suggestion" data-chat-prompt="¿Cómo sé si una fuente de salud es confiable?">¿Cómo encuentro información confiable?</button>
+          <button class="suggestion" data-chat-prompt="¿Qué significa consentimiento?">¿Qué es el consentimiento?</button>
+          <button class="suggestion" data-chat-prompt="¿Dónde puedo pedir orientación médica?">¿Dónde puedo pedir ayuda?</button>
+          <div class="chat-privacy">🔒 <span>No compartas tu nombre, dirección, escuela ni otros datos personales.</span></div>
+        </aside>
+        <div class="chat-main">
+          <div class="chat-topline"><div><b>Asistente inteligente EduSex</b><small>IA educativa · respuestas en lenguaje claro</small></div><span class="chat-badge">ASISTENTE IA</span></div>
+          <div class="chat-messages" id="chatMessages" aria-live="polite" aria-label="Mensajes del chat"><div class="message bot-message"><div class="message-avatar">E</div><div class="bubble"><b>¡Hola! Soy el asistente de EduSex 👋</b><p>Puedes preguntarme con tus propias palabras sobre educación sexual, cambios en la adolescencia, consentimiento, métodos anticonceptivos, ITS, relaciones saludables y salud reproductiva. Intentaré explicarlo de forma clara y sin juzgarte.</p><small>EduSex · asistente educativo</small></div></div></div>
+          <div class="chat-quick-actions"><button class="quick-prompt" data-chat-prompt="Quiero saber sobre prevención.">Prevención</button><button class="quick-prompt" data-chat-prompt="Tengo una duda y quiero saber cómo buscar ayuda.">Buscar ayuda</button></div>
+          <form class="chat-composer" id="chatForm"><label class="sr-only" for="chatInput">Escribe tu pregunta</label><input id="chatInput" type="text" maxlength="500" placeholder="Escribe tu pregunta aquí…" autocomplete="off" required><button class="btn primary" type="submit">Enviar <span>➤</span></button></form>
+          <p class="chat-disclaimer">Asistente educativo con IA. Puede equivocarse y no diagnostica ni sustituye al personal de salud. No escribas datos personales. Los mensajes se envían al proveedor de IA para generar la respuesta; no se guardan en una base de datos de EduSex. Si no está configurada la API, el chat mostrará cómo activarla. En una emergencia, busca ayuda inmediata de una persona adulta de confianza o de los servicios de emergencia locales.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen section quiz-section" id="prueba">
+      <div class="section-heading">
+        <span class="eyebrow">05 / COMPRUEBA LO QUE SABES</span>
+        <h2>Mini prueba</h2>
+        <p>Responde tres preguntas educativas y revisa tu resultado.</p>
+      </div>
+      <div class="quiz panel">
+        <div class="quiz-progress"><span id="questionCounter">PREGUNTA 1 DE 3</span><div class="progress-track"><div id="progressBar"></div></div></div>
+        <h3 id="questionText">¿El consentimiento puede retirarse en cualquier momento?</h3>
+        <div id="answers" class="answers">
+          <button class="answer" data-correct="true">Sí, siempre.</button>
+          <button class="answer" data-correct="false">No, una vez aceptado ya no se puede cambiar.</button>
+          <button class="answer" data-correct="false">Solo si otra persona lo permite.</button>
+        </div>
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+        <div class="quiz-actions"><button class="btn secondary" id="restartQuiz">Reiniciar</button><button class="btn primary" id="nextQuestion" disabled>Siguiente →</button></div>
+      </div>
+    </section>
+
+    <section class="screen section account-section" id="cuenta">
+      <div class="section-heading">
+        <span class="eyebrow">05 / TU ESPACIO PERSONAL</span>
+        <h2>Tu cuenta EduSex</h2>
+        <p>Crea un perfil con un alias o entra a tu perfil de demostración.</p>
+      </div>
+      <div class="account-shell">
+        <div class="account-intro">
+          <div class="account-symbol">e<span>+</span></div>
+          <span class="eyebrow">APRENDE · DECIDE · CUÍDATE</span>
+          <h3>Un espacio para ti</h3>
+          <p>Consulta la información a tu ritmo y mantén un perfil sencillo para esta demostración.</p>
+          <ul><li>Usa un alias si lo prefieres.</li><li>No necesitas compartir información íntima.</li><li>Tu perfil de prueba se guarda solo en este navegador.</li></ul>
+        </div>
+        <div class="account-content">
+          <div id="accountForms">
+            <div class="account-tabs" role="tablist" aria-label="Acceso a la cuenta">
+              <button type="button" class="account-tab active" id="showLogin">Iniciar sesión</button>
+              <button type="button" class="account-tab" id="showRegister">Crear perfil</button>
+            </div>
+            <form id="loginForm" class="account-form">
+              <h3>¡Qué bueno verte!</h3><p>Ingresa el correo que usaste al crear tu perfil de demostración.</p>
+              <label for="loginEmail">Correo electrónico</label><input id="loginEmail" type="email" autocomplete="email" required placeholder="tu@correo.com">
+              <label for="loginPassword">Contraseña de demostración</label><input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Escribe cualquier contraseña para la demo">
+              <button class="btn primary account-submit" type="submit">Entrar a mi perfil <span>→</span></button>
+              <p class="form-message" id="loginMessage" aria-live="polite"></p>
+              <small class="form-help">Prototipo sin base de datos: no uses una contraseña real.</small>
+            </form>
+            <form id="createProfileForm" class="account-form hidden">
+              <h3>Crea tu perfil</h3><p>Solo pedimos datos básicos para mostrar cómo se vería la cuenta.</p>
+              <label for="profileAlias">Nombre o alias</label><input id="profileAlias" type="text" autocomplete="nickname" maxlength="35" required placeholder="¿Cómo te gustaría aparecer?">
+              <label for="profileEmail">Correo electrónico</label><input id="profileEmail" type="email" autocomplete="email" required placeholder="tu@correo.com">
+              <label for="profilePassword">Contraseña de demostración</label><input id="profilePassword" type="password" minlength="4" autocomplete="new-password" required placeholder="Mínimo 4 caracteres">
+              <label class="privacy-check"><input id="privacyAccepted" type="checkbox" required> <span>Entiendo que es una demostración y que todavía no hay una cuenta segura conectada a una base de datos.</span></label>
+              <button class="btn primary account-submit" type="submit">Crear perfil <span>→</span></button>
+              <p class="form-message" id="registerMessage" aria-live="polite"></p>
+              <small class="form-help">No guardamos la contraseña. El perfil de prueba se guarda localmente en este navegador.</small>
+            </form>
+          </div>
+          <div id="profileView" class="profile-view hidden">
+            <div class="profile-avatar" id="profileAvatar">E</div><span class="eyebrow">PERFIL DE DEMOSTRACIÓN</span><h3 id="profileGreeting">¡Hola!</h3><p id="profileEmailText"></p>
+            <div class="profile-detail"><span>Estado de cuenta</span><b>Perfil local de prueba</b></div>
+            <div class="profile-detail"><span>Prueba de conocimientos</span><b>Disponible en la sección Mini prueba</b></div>
+            <p class="form-help">Este perfil no está conectado a un servidor. Si borras los datos del navegador, puede desaparecer.</p>
+            <div class="profile-actions"><button class="btn secondary" id="editProfile" type="button">Editar alias</button><button class="btn primary" id="logoutProfile" type="button">Cerrar sesión</button><button class="text-link delete-profile" id="deleteProfile" type="button">Eliminar perfil local</button></div>
+            <p class="form-message" id="profileMessage" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+      <div class="account-warning"><span>ⓘ</span><p><b>Importante:</b> esta es una interfaz de demostración. El inicio de sesión todavía no verifica contraseñas ni protege cuentas reales. Para publicarla, se debe conectar PHP y MySQL y agregar medidas de seguridad.</p></div>
+    </section>
+
+    <section class="screen section register-section" id="registro">
+      <div class="register-card">
+        <div><span class="eyebrow">06 / TU PRIVACIDAD IMPORTA</span><h2>Explora a tu ritmo</h2><p>Este prototipo no necesita registro para consultar la información. Si más adelante se agrega una cuenta, debe explicarse claramente qué datos se recopilan y para qué.</p></div>
+        <div class="privacy-mark">✓<span>Privacidad<br>primero</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#inicio"><img src="assets/logo-edusex.svg" alt=""><span>Edu<span class="brand-accent">Sex</span><small>APRENDE · DECIDE · CUÍDATE</small></span></a>
+    <p>Información para aprender y cuidarte. Verifica los servicios de salud directamente con cada institución.</p>
+    <div class="footer-links"><a href="#mitos">Mitos y realidades</a><a href="#centros">Hospitales</a><a href="#orientacion">Orientación</a>
+      <a href="#chat-orientacion">Chat de orientación</a></div>
+    <small>© 2026 EduSex · Proyecto escolar</small>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
